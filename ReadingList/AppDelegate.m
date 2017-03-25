@@ -115,6 +115,7 @@
         NSURL *url = [NSURL URLWithString:item.urlString];
         if (url) {
             [urls addObject:url];
+            [self.readingListController markItem:item asUnread:NO]; // safari doesn't show this change until relaunch
         }
     }
     NSWorkspaceLaunchOptions options = NSWorkspaceLaunchDefault;
