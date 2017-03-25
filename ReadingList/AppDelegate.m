@@ -33,6 +33,8 @@
     Method m2 = class_getClassMethod([SwizzleLamb class], @selector(canPerformUserInitiatedBookmarkOperations));
     method_exchangeImplementations(m1, m2);
     
+    self.window.titleVisibility = NSWindowTitleHidden;
+    
     // -allItems is initially nil, so command line apps will have to block until the change notification
     self.readingListController = [NSClassFromString(@"ReadingListController") sharedController];
     
@@ -57,6 +59,18 @@
         NSLog(@"%@: %@", (item.siteName ?: item.domainString), item.title);
         NSLog(@"Added %@", item.dateAdded);
         NSLog(@"%@", item.previewText);
+    }
+}
+
+- (IBAction)search:(NSSearchField *)sender {
+    NSString *searchTerm = sender.stringValue;
+    if (searchTerm.length > 0) {
+        NSPredicate *title = [NSPredicate predicateWithFormat:@"title contains[cd] %@", searchTerm];
+        NSPredicate *domain = [NSPredicate predicateWithFormat:@"domainString contains[cd] %@", searchTerm];
+        NSPredicate *preview = [NSPredicate predicateWithFormat:@"previewText contains[cd] %@", searchTerm];
+        self.arrayController.filterPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[title, domain, preview]];
+    } else {
+        self.arrayController.filterPredicate = nil;
     }
 }
 

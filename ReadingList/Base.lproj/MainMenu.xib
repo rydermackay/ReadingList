@@ -4,7 +4,6 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -704,7 +703,7 @@ CA
                 </menuItem>
             </items>
         </menu>
-        <window title="ReadingList" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="ReadingList" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" tabbingMode="disallowed" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
@@ -840,7 +839,7 @@ CA
                                         </tableColumn>
                                         <tableColumn width="269" minWidth="40" maxWidth="1000" id="jUz-53-Bgy" userLabel="Preview Text">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Preview Text">
-                                                <font key="font" metaFont="systemMedium" size="11"/>
+                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -891,7 +890,7 @@ CA
                             <rect key="frame" x="0.0" y="344" width="480" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Xe3-xD-2Z2">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Xe3-xD-2Z2">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -908,6 +907,33 @@ CA
                     <constraint firstItem="Kib-k9-I6v" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="ztV-eP-7fn"/>
                 </constraints>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="BA49A02B-457B-4D63-A2EC-BFD2C247CCAE" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="86h-sw-uaL">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="LvY-oX-fgO"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="xyD-ca-pRt"/>
+                    <toolbarItem implicitItemIdentifier="9D1393B8-B4B4-42E2-866F-B33BFD93559E" label="Search" paletteLabel="Search" id="unn-l3-I6h">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="96" height="22"/>
+                        <size key="maxSize" width="222" height="22"/>
+                        <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="6Un-ba-k0g">
+                            <rect key="frame" x="0.0" y="14" width="220" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="oTc-YJ-A2s">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </searchFieldCell>
+                            <connections>
+                                <action selector="search:" target="Voe-Tx-rLC" id="SC8-ni-LwC"/>
+                            </connections>
+                        </searchField>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="xyD-ca-pRt"/>
+                    <toolbarItem reference="unn-l3-I6h"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
         <menu id="DnI-ay-431" userLabel="Table Menu">
             <items>
