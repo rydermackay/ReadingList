@@ -75,6 +75,26 @@
 }
 
 - (IBAction)delete:(id)sender {
+    NSUInteger count = self.arrayController.selectedObjects.count;
+    if (count > 1) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        alert.messageText = [NSString stringWithFormat:@"Are you sure you want to delete %lu items?", count];
+        alert.informativeText = @"This operation cannot be undone. Don’t blame me if you lose something important.";
+        [alert addButtonWithTitle:[NSString stringWithFormat:@"Delete %lu Items", count]];
+        [alert addButtonWithTitle:@"Cancel"];
+        alert.buttons[0].keyEquivalent = @"\r";
+        alert.buttons[1].keyEquivalent = @"\e";
+        [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+            if (returnCode == NSAlertFirstButtonReturn) {
+                [self reallyDelete];
+            }
+        }];
+    } else {
+        [self reallyDelete];
+    }
+}
+
+- (void)reallyDelete {
     for (id <ReadingListItem> item in self.arrayController.selectedObjects) {
         [self.readingListController removeItem:item];
     }
