@@ -1,5 +1,8 @@
 
-This little app uses private API to display Safari’s Reading List. It has a few features:
+ReadingList
+===========
+
+This little Mac app uses private API to display Safari’s Reading List. It has a few features:
 
 - sort and filter by title, date, domain and preview text
 - multiple selection
