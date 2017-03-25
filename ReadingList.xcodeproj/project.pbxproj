@@ -12,6 +12,7 @@
 		0D3E26D41E85A96700AC91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D31E85A96700AC91B3 /* Assets.xcassets */; };
 		0D3E26D71E85A96700AC91B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D51E85A96700AC91B3 /* MainMenu.xib */; };
 		0D3E26E01E85A99300AC91B3 /* Safari in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3E26DF1E85A99300AC91B3 /* Safari */; };
+		0D9A01051E8603370074A735 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A01041E8603370074A735 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0D3E26D81E85A96700AC91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D3E26DF1E85A99300AC91B3 /* Safari */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = Safari; path = ../../../../System/Library/PrivateFrameworks/Safari.framework/Versions/A/Safari; sourceTree = "<group>"; };
 		0D3E26E11E85E01F00AC91B3 /* ReadingList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadingList.h; sourceTree = "<group>"; };
+		0D9A01041E8603370074A735 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		0D3E26C11E85A96700AC91B3 = {
 			isa = PBXGroup;
 			children = (
+				0D9A01041E8603370074A735 /* README.md */,
 				0D3E26CC1E85A96700AC91B3 /* ReadingList */,
 				0D3E26CB1E85A96700AC91B3 /* Products */,
 				0D3E26DE1E85A99200AC91B3 /* Frameworks */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9A01051E8603370074A735 /* README.md in Sources */,
 				0D3E26D21E85A96700AC91B3 /* main.m in Sources */,
 				0D3E26CF1E85A96700AC91B3 /* AppDelegate.m in Sources */,
 			);
@@ -315,6 +319,7 @@
 				0D3E26DD1E85A96700AC91B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
