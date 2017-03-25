@@ -7,6 +7,8 @@ This little app uses private API to display Safari’s Reading List. It has a fe
 - open selected items in the default browser by pressing return (hold option to open in background)
 - remove selected items by pressing delete
 
+Make sure you quit the app (instead of killing the process from Xcode) to ensure changes are flushed.
+
 ![ReadingList in action](ReadingList.png)
 
 Disclaimer
