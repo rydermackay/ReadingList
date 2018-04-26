@@ -12,7 +12,6 @@
 		0D3E26D41E85A96700AC91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D31E85A96700AC91B3 /* Assets.xcassets */; };
 		0D3E26D71E85A96700AC91B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D51E85A96700AC91B3 /* MainMenu.xib */; };
 		0D6458512091401900320522 /* Safari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6458502091401900320522 /* Safari.framework */; };
-		0D9A01051E8603370074A735 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A01041E8603370074A735 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9A01051E8603370074A735 /* README.md in Sources */,
 				0D3E26D21E85A96700AC91B3 /* main.m in Sources */,
 				0D3E26CF1E85A96700AC91B3 /* AppDelegate.m in Sources */,
 			);
