@@ -11,7 +11,7 @@
 		0D3E26D21E85A96700AC91B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E26D11E85A96700AC91B3 /* main.m */; };
 		0D3E26D41E85A96700AC91B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D31E85A96700AC91B3 /* Assets.xcassets */; };
 		0D3E26D71E85A96700AC91B3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E26D51E85A96700AC91B3 /* MainMenu.xib */; };
-		0D3E26E01E85A99300AC91B3 /* Safari in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3E26DF1E85A99300AC91B3 /* Safari */; };
+		0D6458512091401900320522 /* Safari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6458502091401900320522 /* Safari.framework */; };
 		0D9A01051E8603370074A735 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0D9A01041E8603370074A735 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +23,8 @@
 		0D3E26D31E85A96700AC91B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3E26D61E85A96700AC91B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0D3E26D81E85A96700AC91B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D3E26DF1E85A99300AC91B3 /* Safari */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = Safari; path = ../../../../System/Library/PrivateFrameworks/Safari.framework/Versions/A/Safari; sourceTree = "<group>"; };
 		0D3E26E11E85E01F00AC91B3 /* ReadingList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadingList.h; sourceTree = "<group>"; };
+		0D6458502091401900320522 /* Safari.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Safari.framework; path = /System/Library/PrivateFrameworks/Safari.framework; sourceTree = "<absolute>"; };
 		0D9A01041E8603370074A735 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D3E26E01E85A99300AC91B3 /* Safari in Frameworks */,
+				0D6458512091401900320522 /* Safari.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		0D3E26DE1E85A99200AC91B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D3E26DF1E85A99300AC91B3 /* Safari */,
+				0D6458502091401900320522 /* Safari.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,6 +280,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rydermackay.ReadingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 			};
 			name = Debug;
 		};
@@ -297,6 +298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rydermackay.ReadingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 			};
 			name = Release;
 		};
